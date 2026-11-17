@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QRCrypt</string>
+
+    <!-- Navigation -->
+    <string name="nav_create">Create</string>
+    <string name="nav_scan">Scan &amp; Wrap</string>
+    <string name="settings_title">Settings</string>
+
+    <!-- Templates -->
+    <string name="template_note">Text / Note</string>
+    <string name="template_totp">2FA (TOTP)</string>
+    <string name="template_wifi">Wi-Fi</string>
+    <string name="template_uri">Link / URI</string>
+
+    <!-- Form fields -->
+    <string name="field_note_label">Secret text, note, or recovery keys</string>
+    <string name="field_note_placeholder">Enter any text to encrypt…</string>
+    <string name="field_totp_issuer">Service (Issuer)</string>
+    <string name="field_totp_issuer_placeholder">e.g. GitHub, Google</string>
+    <string name="field_totp_account">Account</string>
+    <string name="field_totp_account_placeholder">e.g. user@example.com</string>
+    <string name="field_totp_secret">Secret Key (Base32)</string>
+    <string name="field_totp_secret_placeholder">e.g. JBSWY3DPEHPK3PXP</string>
+    <string name="field_totp_advanced">Advanced TOTP options</string>
+    <string name="field_totp_algorithm">Algorithm</string>
+    <string name="field_totp_digits">Digits</string>
+    <string name="field_totp_period">Period (seconds)</string>
+
+    <string name="field_wifi_ssid">Network Name (SSID)</string>
+    <string name="field_wifi_password">Wi-Fi Password</string>
+    <string name="field_wifi_security">Security</string>
+    <string name="field_wifi_hidden">Hidden network</string>
+    <string name="wifi_security_wpa">WPA / WPA2 / WPA3</string>
+    <string name="wifi_security_wep">WEP</string>
+    <string name="wifi_security_open">Open (No password)</string>
+    <string name="action_open_wifi_settings">Open system Wi-Fi settings</string>
+    <string name="wifi_settings_hint">Open Android Wi-Fi settings to view your device\'s native QR code for re-wrapping.</string>
+
+    <string name="field_uri_label">Link or URI</string>
+    <string name="field_uri_placeholder">https://… or otpauth://…</string>
+
+    <!-- Encryption & Export -->
+    <string name="field_password">Encryption Password</string>
+    <string name="field_password_confirm">Confirm Password</string>
+    <string name="field_unlock_password">Password</string>
+    <string name="field_visible_label">Visible label on PNG (optional)</string>
+    <string name="field_visible_label_hint">Printed below the QR image only — leave empty to keep completely anonymous</string>
+    <string name="action_encrypt_generate">Encrypt &amp; Generate QR</string>
+    <string name="action_encrypting">Encrypting…</string>
+    <string name="action_decrypt">Decrypt</string>
+    <string name="action_decrypting">Decrypting…</string>
+    <string name="action_save_png">Save PNG</string>
+    <string name="action_share_png">Share Image</string>
+    <string name="action_close">Close</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_back">Back</string>
+    <string name="action_open">Open</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_copy_password">Copy Password</string>
+    <string name="action_share">Share</string>
+    <string name="action_connect_wifi">Save / Connect Wi-Fi</string>
+    <string name="action_rewrap">Re-wrap with new password</string>
+    <string name="action_decrypt_now">Decrypt now</string>
+    <string name="action_toggle_password">Toggle password visibility</string>
+    <string name="action_toggle_monospace">Monospace</string>
+
+    <!-- Generated QR Sheet -->
+    <string name="qr_generated_title">Encrypted QR Code</string>
+    <string name="qr_generated_subtitle">Protected with Argon2id + AES-256-GCM</string>
+    <string name="msg_saved_gallery">Saved to Pictures/QRCrypt</string>
+    <string name="msg_save_failed">Failed to save image</string>
+    <string name="msg_share_failed">Failed to share image</string>
+    <string name="msg_copied_sensitive">Copied (marked sensitive)</string>
+    <string name="msg_wifi_add_sent">Opened system Wi-Fi prompt</string>
+    <string name="msg_no_app_for_uri">No app installed to handle this link. You can copy or share it below.</string>
+
+    <!-- Scan & Wrap -->
+    <string name="scan_title">Scan &amp; Wrap Existing QR</string>
+    <string name="scan_subtitle">Point at a QR code (e.g. on your PC screen) or pick an image from your gallery.</string>
+    <string name="action_scan_camera">Scan with Camera</string>
+    <string name="action_pick_gallery">Pick from Gallery</string>
+    <string name="camera_permission_rationale">Camera permission is only used locally to scan QR codes offline.</string>
+    <string name="camera_permission_denied">Camera permission denied. You can still pick a QR image from your gallery.</string>
+    <string name="camera_scanning_hint">Align a QR code within the frame</string>
+    <string name="msg_no_qr_found">No QR code found in the selected image.</string>
+    <string name="msg_image_read_error">Could not read the selected image.</string>
+    <string name="scanned_payload_badge">Detected: %1$s</string>
+    <string name="scanned_already_encrypted_title">Already a QRCrypt QR Code</string>
+    <string name="scanned_already_encrypted_body">This QR code is already encrypted with qrcrypt://. Would you like to decrypt it now?</string>
+    <string name="scanned_wrap_title">Wrap Scanned QR Code</string>
+    <string name="action_scan_another">Scan another</string>
+
+    <!-- Payload Types -->
+    <string name="type_totp">2FA (TOTP)</string>
+    <string name="type_wifi">Wi-Fi Network</string>
+    <string name="type_uri">Link / URI</string>
+    <string name="type_text">Plain Text</string>
+    <string name="type_qrcrypt">QRCrypt</string>
+
+    <!-- Decrypt Dialog -->
+    <string name="decrypt_title">Unlock QRCrypt</string>
+    <string name="decrypt_subtitle">Enter the password to decrypt locally offline.</string>
+    <string name="decrypt_result_wifi">Wi-Fi Credentials</string>
+    <string name="decrypt_result_uri">Decrypted Link / URI</string>
+    <string name="decrypt_result_text">Decrypted Content</string>
+    <string name="decrypt_result_totp">2FA Account</string>
+    <string name="wifi_label_ssid">Network (SSID)</string>
+    <string name="wifi_label_security">Security</string>
+    <string name="wifi_label_password">Password</string>
+    <string name="wifi_label_hidden">Hidden</string>
+    <string name="wifi_open_none">None (Open network)</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <!-- Validation & Crypto Errors -->
+    <string name="err_empty_content">Enter content to encrypt.</string>
+    <string name="err_empty_password">Enter a password.</string>
+    <string name="err_password_mismatch">Passwords do not match.</string>
+    <string name="err_empty_ssid">Enter the Wi-Fi network name (SSID).</string>
+    <string name="err_empty_totp_secret">Enter the Base32 secret key.</string>
+    <string name="err_invalid_totp_secret">Secret key must be valid Base32 (A–Z, 2–7).</string>
+    <string name="err_invalid_uri">Enter a valid URI with a scheme (e.g. https://…).</string>
+    <string name="err_wrong_password">Incorrect password or corrupted QR code.</string>
+    <string name="err_invalid_qrcrypt">Not a valid qrcrypt:// payload.</string>
+    <string name="err_unsupported_version">Unsupported QRCrypt format version or algorithm.</string>
+    <string name="err_payload_too_large">Content is too large to fit reliably in a QR code.</string>
+
+    <!-- Settings -->
+    <string name="pref_preview_uri_title">Preview URIs before opening</string>
+    <string name="pref_preview_uri_summary">Show decrypted links (https://, otpauth://, etc.) and ask for confirmation instead of opening them immediately.</string>
+    <string name="about_title">About QRCrypt</string>
+    <string name="about_crypto">Format: qrcrypt://v1 (Base64URL)\nKDF: Argon2id (parameters embedded in header)\nCipher: AES-256-GCM (header authenticated via AAD)</string>
+    <string name="about_privacy">100% Offline: This app requests NO internet permission. Screenshots and recents previews are blocked (FLAG_SECURE). Sensitive data is cleared from memory after use.</string>
+    <string name="about_version">Version %1$s</string>
+</resources>

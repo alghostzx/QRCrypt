@@ -1,0 +1,30 @@
+# Build outputs
+build/
+app/build/
+dist/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Gradle & IDE
+.gradle/
+.gradle-cache/
+.idea/
+*.iml
+local.properties
+captures/
+.cxx/
+.kotlin/
+
+# Signing keys & secrets (NEVER commit!)
+keystore/
+*.jks
+*.keystore
+*.p12
+keystore.properties
+
+# OS files
+.DS_Store
+Thumbs.db

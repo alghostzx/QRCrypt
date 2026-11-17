@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Top-left QR finder -->
+    <path
+        android:fillColor="#E2F1FF"
+        android:pathData="M24,24h22v22h-22z M28,28v14h14v-14z M32,32h6v6h-6z" />
+    <!-- Top-right QR finder -->
+    <path
+        android:fillColor="#E2F1FF"
+        android:pathData="M62,24h22v22h-22z M66,28v14h14v-14z M70,32h6v6h-6z" />
+    <!-- Bottom-left QR finder -->
+    <path
+        android:fillColor="#E2F1FF"
+        android:pathData="M24,62h22v22h-22z M28,66v14h14v-14z M32,70h6v6h-6z" />
+    <!-- Subtle QR data dots -->
+    <path
+        android:fillColor="#8EC5FF"
+        android:pathData="M51,26h6v6h-6z M26,51h6v6h-6z M51,76h6v6h-6z M76,51h6v6h-6z" />
+    <!-- Center Padlock Badge -->
+    <path
+        android:fillColor="#0F2942"
+        android:pathData="M54,40 A20,20 0 1,1 53.99,40 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M54,43 C49.58,43 46,46.58 46,51 L46,55 L44,55 C42.9,55 42,55.9 42,57 L42,73 C42,74.1 42.9,75 44,75 L64,75 C65.1,75 66,74.1 66,73 L66,57 C66,55.9 65.1,55 64,55 L62,55 L62,51 C62,46.58 58.42,43 54,43 Z M50,51 C50,48.79 51.79,47 54,47 C56.21,47 58,48.79 58,51 L58,55 L50,55 Z M54,61 C55.66,61 57,62.34 57,64 C57,65.11 56.4,66.08 55.5,66.6 L56,70 L52,70 L52.5,66.6 C51.6,66.08 51,65.11 51,64 C51,62.34 52.34,61 54,61 Z" />
+</vector>
