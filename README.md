@@ -64,3 +64,7 @@ keyPassword=...
 ```
 
 In GitHub Actions (`.github/workflows/build.yml`), configure repository secrets `KEYSTORE_BASE64`, `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`. Pushing a tag like `v1.0.0` automatically builds, verifies, signs, and publishes a GitHub Release with `QRCrypt-v1.0.0.apk` and `SHA256SUMS.txt`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
