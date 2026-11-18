@@ -14,11 +14,18 @@ ensure_image() {
 run_in_docker() {
     ensure_image
     mkdir -p "${SCRIPT_DIR}/.gradle-cache"
+    local extra_mounts=()
+    if [ -L "${SCRIPT_DIR}/keystore" ] && [ -d "${SCRIPT_DIR}/keystore" ]; then
+        local keystore_target
+        keystore_target="$(readlink -f "${SCRIPT_DIR}/keystore")"
+        extra_mounts+=(-v "${keystore_target}:/workspace/keystore:ro")
+    fi
     docker run --rm \
         --user "$(id -u):$(id -g)" \
         -e "GRADLE_USER_HOME=/workspace/.gradle-cache" \
         -e "HOME=/tmp" \
         -v "${SCRIPT_DIR}:/workspace" \
+        "${extra_mounts[@]}" \
         -w /workspace \
         "${IMAGE_NAME}" \
         "$@"
@@ -31,11 +38,16 @@ case "${1:-release}" in
     shell)
         ensure_image
         mkdir -p "${SCRIPT_DIR}/.gradle-cache"
+        extra_mounts=()
+        if [ -L "${SCRIPT_DIR}/keystore" ] && [ -d "${SCRIPT_DIR}/keystore" ]; then
+            extra_mounts+=(-v "$(readlink -f "${SCRIPT_DIR}/keystore"):/workspace/keystore:ro")
+        fi
         docker run --rm -it \
             --user "$(id -u):$(id -g)" \
             -e "GRADLE_USER_HOME=/workspace/.gradle-cache" \
             -e "HOME=/tmp" \
             -v "${SCRIPT_DIR}:/workspace" \
+            "${extra_mounts[@]}" \
             -w /workspace \
             "${IMAGE_NAME}" \
             bash

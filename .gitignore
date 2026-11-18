@@ -19,6 +19,7 @@ captures/
 .kotlin/
 
 # Signing keys & secrets (NEVER commit!)
+keystore
 keystore/
 *.jks
 *.keystore
